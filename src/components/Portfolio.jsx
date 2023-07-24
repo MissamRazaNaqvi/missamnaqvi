@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import {  motion} from 'framer-motion'
 import newsapp from "../assets/portfolio/newsapp.png";
 import installNode from "../assets/portfolio/installNode.jpg";
 import todo from "../assets/portfolio/todo.png";
 import textutil from "../assets/portfolio/textutil.png";
 import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
-
+import style from '../assets/css/portfolio.module.css'
+import { useEffect } from "react";
 const Portfolio = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const portfolios = [
     {
       id: 1,
@@ -34,7 +37,10 @@ const Portfolio = () => {
       src: reactWeather,
     },
   ];
-
+  useEffect(() => {
+  
+  }, [isVisible])
+  
   return (
     <div
       name="portfolio"
@@ -48,12 +54,12 @@ const Portfolio = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+        <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 mb-32 sm:px-0 ${style.CardContainer} ${style.CardContainerTwo}`}>
           {portfolios.map(({ id, src,href }) => (
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+            <motion.div key={id} className={`shadow-md shadow-gray-600 rounded-lg Card ${style.Card} ${isVisible && style.Lagao} `}  id={`hehe${id}`}>
               <img
                 src={src}
-                alt=""
+                alt="projects"
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
@@ -64,7 +70,7 @@ const Portfolio = () => {
                   Code
                 </button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

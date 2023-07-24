@@ -1,0 +1,101 @@
+.ProfileImage{
+    animation: Intro 3s ease;
+}
+
+.ProfileTitle {
+  font-size: 6rem;
+  font-family: 'Merienda', sans-serif;
+  margin: 1rem auto;
+  color: #fffefe61;
+  background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
+  background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
+  background-size: 110px 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: flick 5s infinite;
+}
+.IntroText{
+	animation: comedown 1.5s ease ;
+}
+@keyframes comedown {
+	0%{
+		transform: translateY(-100px);
+		opacity: 0;
+	}
+	60%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes flick {
+  0% {
+    background-position: top left;
+  }
+  50% {
+    background-position: top right;
+  }
+  100% {
+    background-position: top left;
+  }
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 10px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 20px #ef00e3a8, 0 0 2px #fed128, 2px 2px 2px #806914;
+        color: #f5efcb;
+    }
+    50% {
+        text-shadow: 0 0 2px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 5px #800e0b, 0 0 2px #800e0b, 4px 4px 2px #40340a;
+        color: #000000;
+    }
+}
+@keyframes shine {
+	0% {
+        text-shadow: 5px 10px 70px rgba(10, 68, 255, 0.973);
+	}
+	10% {
+        text-shadow: 5px 10px 70px rgba(59, 145, 245, 0.973);
+	}
+	20% {
+        text-shadow: 10px 5px 70px rgba(172, 99, 255, 0.973);
+	}
+	30% {
+        text-shadow:  5px 10px  70px rgba(255, 84, 184, 0.973);
+	}
+	40% {
+        text-shadow: 10px 5px 70px rgba(255, 217, 93, 0.973);
+	}
+	50% {
+        text-shadow: 5px 10px  70px rgba(255, 156, 63, 0.973);
+	}
+	60% {
+        text-shadow:10px 5px 70px rgba(65, 255, 182, 0.973);
+	}
+	70% {
+        text-shadow:  5px 10px  70px rgba(252, 23, 23, 0.973);
+	}
+	80% {
+        text-shadow:10px 5px 70px rgba(231, 132, 38, 0.973);
+	}
+	90% {
+        text-shadow: 5px 10px  70px rgba(12, 143, 0, 0.973);
+	}
+	100% {
+        text-shadow:10px 5px 70px rgba(10, 68, 255, 0.973);
+	}
+}
+@keyframes Intro {
+    0%{
+        opacity: 0;
+        transform: translateY(500px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+

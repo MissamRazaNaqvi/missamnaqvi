@@ -1,0 +1,59 @@
+
+.Card{
+    overflow: hidden;
+    z-index: 20;
+    position: relative;
+}
+.CardContainer{
+    position: relative;
+}
+.CardContainer::before{
+    position: absolute;
+    content:"";
+    z-index: 0;
+    width: 10%;
+    left: 0%;
+    top: 98%;
+    height:10px;
+    background-color: rgb(255, 255, 255);
+    opacity: .8;
+    animation: li 5s infinite;
+    animation-delay: 2.5s;
+}
+.CardContainer::after{
+    position: absolute;
+    content:"";
+    z-index: 0;
+    width: 10%;
+    left: 0%;
+    top: 45%;
+    height:10px;
+    background-color: rgb(255, 255, 255);
+    opacity: .8;
+    animation: li 5s infinite;
+}
+
+@keyframes li {
+        50%{
+            left: 90%;
+        }
+}
+@keyframes shine {
+    50%{
+        background-color: blue;
+    }
+    100%{
+        background-color: yellow;
+    }
+}
+@keyframes Shadows {
+    0%{
+        box-shadow: 2px 2px 18px whitesmoke,opacity(20%);
+    }
+    50%{
+        box-shadow: 2px 2px 18px rgb(121, 243, 7);
+    }
+    100%{
+        box-shadow: 5px 2px 18px whitesmoke,opacity(20%);
+    }
+}

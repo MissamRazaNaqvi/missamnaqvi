@@ -1,0 +1,8 @@
+.SecondShadow{
+    animation: shadow 2s infinite;
+}
+@keyframes shadow {
+    50%{
+        box-shadow: 12px 12px 12px 10px transparent;
+    }
+}

@@ -11,3 +11,51 @@
     font-family: 'Raleway', sans-serif;
   }
 }
+::-webkit-scrollbar {
+  display: none;
+}
+.test{
+  border: 5px solid red;
+}
+.Card{
+  animation: first 6s infinite ;
+}
+#hehe1{
+  animation-delay: 0S;
+}
+#hehe2{
+  animation-delay: 1s;
+}
+#hehe3{
+  animation-delay: 2s;
+}
+#hehe4{
+  animation-delay: 3s;
+}
+#hehe5{
+  animation-delay: 4s;
+}
+#hehe6{
+  animation-delay: 5s;
+}
+@keyframes first{
+  16.666666667%{
+  box-shadow: 2px 2px 18px rgb(233, 233, 233);
+}
+}
+@keyframes center {
+  0%{
+      transform:translateY(-150px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+@keyframes right {
+  0%{
+      transform:translateX(150px);
+  }
+  100%{
+      transform: translateX(0);
+  }
+}

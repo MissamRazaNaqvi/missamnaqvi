@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from '../assets/css/experience.module.css'
 import html from "../assets/html.png";
 import css from "../assets/css.png";
 import javascript from "../assets/javascript.png";
@@ -63,7 +63,7 @@ const Experience = () => {
       id : 9,
       src : img3,
       title:"Flutter",
-      style :"shadow-sky-400",
+      style :"shadow-yellow-400",
     },
   ];
 
@@ -84,9 +84,9 @@ const Experience = () => {
           {techs.map(({ id, src, title, style }) => (
             <div
               key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              className={` ${styles.SecondShadow} shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style} `}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
+              <img src={src} alt="" className="w-20  mx-auto" />
               <p className="mt-4">{title}</p>
             </div>
           ))}
