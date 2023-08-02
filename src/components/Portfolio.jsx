@@ -1,10 +1,10 @@
 import React, { useState , useEffect} from "react";
 import {  motion} from 'framer-motion'
-import newsapp from "../assets/portfolio/newsapp.png";
+import myntra from "../assets/portfolio/myntra.png";
+import antoine from '../assets/portfolio/antoine.png'
 import installNode from "../assets/portfolio/installNode.jpg";
 import todo from "../assets/portfolio/todo.png";
 import textutil from "../assets/portfolio/textutil.png";
-import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
 import style from '../assets/css/portfolio.module.css';
 
@@ -13,7 +13,9 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: newsapp,
+      src: antoine,
+      href:"https://antoine-five.vercel.app/",
+      code:"https://github.com/MissamRazaNaqvi/antoine.git"
     },
     {
       id: 2,
@@ -26,7 +28,9 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      src: reactSmooth,
+      src: myntra,
+      href:"https://missamrazanaqvi.github.io/Myntra/",
+      code:"https://github.com/MissamRazaNaqvi/Myntra"
     },
     {
       id: 5,
@@ -55,7 +59,7 @@ const Portfolio = () => {
         </div>
 
         <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 mb-32 sm:px-0 ${style.CardContainer} ${style.portfolioTitle} ${style.CardContainerTwo}`}>
-          {portfolios.map(({ id, src,href }) => (
+          {portfolios.map(({ id, src,href ,code}) => (
             <motion.div key={id} className={`shadow-md shadow-gray-600 rounded-lg Card ${style.Card} ${isVisible && style.Lagao} `}  id={`hehe${id}`}>
               <img
                 src={src}
@@ -63,12 +67,12 @@ const Portfolio = () => {
                 className="rounded-md duration-200 hover:scale-105"
               />
               <div className="flex items-center justify-center">
-                <a href={href} className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <a href={href}  className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" target="blank">
                   Demo
                 </a>
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
+                <a href={code} className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105" target="blank">
                   Code
-                </button>
+                </a>
               </div>
             </motion.div>
           ))}
