@@ -7,7 +7,7 @@
 .CardContainer{
     position: relative;
 }
-.CardContainer::before{
+/* .CardContainer::before{
     position: absolute;
     content:"";
     z-index: 0;
@@ -31,7 +31,7 @@
     background-color: rgb(255, 255, 255);
     opacity: .8;
     animation: li 5s infinite;
-}
+} */
 
 @keyframes li {
         50%{
@@ -57,3 +57,11 @@
         box-shadow: 5px 2px 18px whitesmoke,opacity(20%);
     }
 }
+@media only screen and (max-width: 676px) {
+    .portfolioTitle{
+        margin-bottom: 192px;
+    }
+    .contact{
+        padding: 495px 0px;
+    }
+  }

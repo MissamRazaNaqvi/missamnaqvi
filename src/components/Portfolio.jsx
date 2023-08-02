@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import {  motion} from 'framer-motion'
 import newsapp from "../assets/portfolio/newsapp.png";
 import installNode from "../assets/portfolio/installNode.jpg";
@@ -6,8 +6,8 @@ import todo from "../assets/portfolio/todo.png";
 import textutil from "../assets/portfolio/textutil.png";
 import reactSmooth from "../assets/portfolio/reactSmooth.jpg";
 import reactWeather from "../assets/portfolio/reactWeather.jpg";
-import style from '../assets/css/portfolio.module.css'
-import { useEffect } from "react";
+import style from '../assets/css/portfolio.module.css';
+
 const Portfolio = () => {
   const [isVisible, setIsVisible] = useState(false);
   const portfolios = [
@@ -44,7 +44,7 @@ const Portfolio = () => {
   return (
     <div
       name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
+      className={`bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen `} 
     >
       <div className="max-w-screen-lg p-3 mx-auto flex flex-col justify-center w-full h-full">
         <div className="pb-8">
@@ -54,7 +54,7 @@ const Portfolio = () => {
           <p className="py-6">Check out some of my work right here</p>
         </div>
 
-        <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 mb-32 sm:px-0 ${style.CardContainer} ${style.CardContainerTwo}`}>
+        <div className={`grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 mb-32 sm:px-0 ${style.CardContainer} ${style.portfolioTitle} ${style.CardContainerTwo}`}>
           {portfolios.map(({ id, src,href }) => (
             <motion.div key={id} className={`shadow-md shadow-gray-600 rounded-lg Card ${style.Card} ${isVisible && style.Lagao} `}  id={`hehe${id}`}>
               <img
